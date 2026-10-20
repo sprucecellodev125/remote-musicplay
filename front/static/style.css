@@ -1,0 +1,59 @@
+body {
+  min-height: 100vh;
+  background: radial-gradient(circle at 15% 0%, #1b2027 0%, #0d1117 55%) fixed;
+}
+
+/* ---- Left pane ---- */
+.cover-wrap {
+  width: min(100%, 320px);
+  aspect-ratio: 1 / 1;
+}
+.cover-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 1rem;
+  background: #212529;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, .45);
+}
+
+.btn-play {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+}
+.btn-player {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ---- Right pane ---- */
+.track-list {
+  max-height: calc(100vh - 150px);
+  overflow-y: auto;
+}
+.track-item {
+  display: flex !important;
+  align-items: center;
+  gap: .75rem;
+  cursor: pointer;
+}
+.mini-cover {
+  width: 44px;
+  height: 44px;
+  border-radius: .5rem;
+  object-fit: cover;
+  background: #212529;
+  flex: 0 0 auto;
+}
+.track-item.active {
+  background: rgba(255, 255, 255, .08);
+}
